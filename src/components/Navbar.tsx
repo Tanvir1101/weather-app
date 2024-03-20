@@ -16,7 +16,7 @@ const Navbar = ({}: Props) => {
           <MdMyLocation className="text-2xl text-gray-400 hover:opacity-80 cursor-pointer" />
           <MdOutlineLocationOn className="text-3xl" />
           <p className="text-slate-900/80 text-sm">Bangladesh</p>
-          <SearchBox value={value}/>
+          <SearchBox />
         </div>
       </div>
     </nav>

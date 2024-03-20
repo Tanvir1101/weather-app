@@ -1,7 +1,9 @@
 import { IoSearch } from "react-icons/io5";
 import React, { FormEventHandler } from "react";
+import { cn } from "@/utils/cn";
 
 type Props = {
+  className?: string;
   value: string;
   onChange: React.ChangeEventHandler<HTMLInputElement> | undefined;
   onSubmit: React.FormEventHandler<HTMLFormElement> | undefined;
@@ -10,8 +12,11 @@ type Props = {
 const SearchBox = (prop: Props) => {
   return (
     <form
-        onSubmit={prop.onSubmit}
-      className="flex relative items-center justify-center h-10"
+      onSubmit={prop.onSubmit}
+      className={cn(
+        "flex relative items-center justify-center h-10",
+        prop.className
+      )}
     >
       <input
         type="text"
